@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 Dice Roller</h1>
+        <p class="subtitle">Roll the dice and test your luck!!</p>
+        <!-- Dice -->
+         <div class="dice" id="dice">
+            <span id="diceNumber">1</span>
+         </div>
+
+         <!-- Result -->
+          <h2 id="result">Roll the Dice!!</h2>
+
+          <!-- Roll Button -->
+           <button id="rollButton">🎲 Roll Dice</button>
+
+           <!-- Roll Count -->
+            <div class="roll-info">
+                <p>Total Rolls: <span id="rollCount">0</span></p>
+            </div>
+
+
+            <!-- History -->
+             <div class="history">
+                <h3>Roll History</h3>
+                <ul id="historyList"><!-- History appears here --></ul>
+                <button id="clearButton">Clear History</button>
+             </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

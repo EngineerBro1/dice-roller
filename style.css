@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+/* Container */
+.container{
+    width: 100%;
+    max-width: 450px;
+    background: rgba(20, 20, 20);
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px gray;
+
+}
+
+/* Heading */
+h1{
+    color: yellow;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.subtitle{
+    color: silver;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Dice */
+.dice{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    background: white;
+    color: black;
+    border: 5px solid gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: bold;
+    box-shadow: 0 0 20px white;
+}
+/* animation */
+.dice.rolling {
+    animation: roll 0.6s;
+}
+@keyframes roll {
+    0%{
+        transform: rotate(0deg)scale(1);
+    }25%{
+        transform: rotate(90deg)scale(1.1);
+    }50%{
+        transform: rotate(180deg)scale(0.9);
+    }75%{
+        transform: rotate(270deg)scale(1.1);
+    }100%{
+        transform: rotate(360deg)scale(1);
+    }
+}
+
+
+/* result */
+h2{
+    color: lime;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Roll Button */
+#rollButton{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    background: black;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#rollButton:hover{
+    background: yellow;
+    color: black;
+    transform: scale(1.03);
+}
+#rollButton:active{
+    transform: scale(0.9);
+}
+
+/* roll info */
+.roll-info{
+    margin-top: 20px;
+    padding: 15px;
+    background: black;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.roll-info p{
+    color: silver;
+}
+
+#rollCount{
+    color: yellow;
+    font-weight: bold;
+}
+
+/* History */
+.history{
+    margin-top: 25px;
+}
+.history h3{
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* History List */
+#historyList{
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+#historyList li{
+    background: black;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/* clear  button */
+#clearButton{
+    padding: 10px 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: black;
+    color: red;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clearButton:hover{
+    background: red;
+    color: white;
+}
+
+/* disable button */
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* scrollbar */
+#historyList::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 10px;
+}
+
+
+
+/* mobile */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .dice {
+        width: 120px;
+        height: 120px;
+        font-size: 55px;
+    }
+}
